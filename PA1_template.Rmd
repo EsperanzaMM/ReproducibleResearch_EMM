@@ -7,7 +7,7 @@ output:
 
 ```{r global}
 # Global options for all chunks
-knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, dev = "png", fig.path = "figure/")
 
 ```
 

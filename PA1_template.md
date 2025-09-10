@@ -8,7 +8,7 @@ output:
 
 ``` r
 # Global options for all chunks
-knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, dev = "png", fig.path = "figure/")
 ```
 
 
@@ -56,7 +56,7 @@ hist(steps_per_day$steps,
      xlim = c(0, max(breaks_seq)))
 ```
 
-![](PA1_template_files/figure-html/dailysteps-1.png)<!-- -->
+![](figure/dailysteps-1.png)<!-- -->
 
 ``` r
 mean_steps <- mean(steps_per_day$steps)
@@ -90,7 +90,7 @@ plot(steps_per_interval$interval,
      ylab = "Average Number of Steps")
 ```
 
-![](PA1_template_files/figure-html/dailypattern-1.png)<!-- -->
+![](figure/dailypattern-1.png)<!-- -->
 
 ``` r
 max_interval <- steps_per_interval$interval[which.max(steps_per_interval$steps)]
@@ -140,7 +140,7 @@ hist(steps_per_day_imputed$total_steps,
      xlim = c(0, max(breaks_seq)))
 ```
 
-![](PA1_template_files/figure-html/imputatingNAs-1.png)<!-- -->
+![](figure/imputatingNAs-1.png)<!-- -->
 
 ``` r
 mean(steps_per_day_imputed$total_steps)
@@ -180,6 +180,6 @@ ggplot(steps_by_daytype, aes(x = interval, y = mean_steps)) +
   theme_minimal()
 ```
 
-![](PA1_template_files/figure-html/weekPatterns-1.png)<!-- -->
+![](figure/weekPatterns-1.png)<!-- -->
 
 
